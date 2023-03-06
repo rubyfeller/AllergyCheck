@@ -1,0 +1,112 @@
+{
+  "allergies": [
+    {
+      "name": "Peanuts",
+      "icon": "🥜",
+      "description": "An allergy to peanuts, a common ingredient in many foods",
+      "symptoms": [
+        "Hives",
+        "Swelling of the lips, face, tongue and throat",
+        "Difficulty breathing",
+        "Stomach cramps",
+        "Vomiting"
+      ]
+    },
+    {
+      "name": "Milk",
+      "icon": "🥛",
+      "description": "An allergy to milk or dairy products",
+      "symptoms": [
+        "Hives",
+        "Stomach cramps",
+        "Vomiting",
+        "Wheezing",
+        "Runny or stuffy nose"
+      ]
+    },
+    {
+      "name": "Eggs",
+      "icon": "🥚",
+      "description": "An allergy to eggs or egg products",
+      "symptoms": [
+        "Hives",
+        "Swelling of the lips, face, tongue and throat",
+        "Difficulty breathing",
+        "Stomach cramps",
+        "Vomiting"
+      ]
+    },
+    {
+      "name": "Soy",
+      "icon": "🫘",
+      "description": "An allergy to soy or soy products",
+      "symptoms": [
+        "Hives",
+        "Swelling of the lips, face, tongue and throat",
+        "Difficulty breathing",
+        "Stomach cramps",
+        "Vomiting"
+      ]
+    },
+    {
+      "name": "Wheat",
+      "icon": "🌾",
+      "description": "An allergy to wheat or wheat products",
+      "symptoms": [
+        "Hives",
+        "Swelling of the lips, face, tongue and throat",
+        "Difficulty breathing",
+        "Stomach cramps",
+        "Vomiting"
+      ]
+    },
+    {
+      "name": "Fish",
+      "icon": "🐟",
+      "description": "An allergy to fish, such as salmon or tuna",
+      "symptoms": [
+        "Hives",
+        "Swelling of the lips, face, tongue and throat",
+        "Difficulty breathing",
+        "Stomach cramps",
+        "Vomiting"
+      ]
+    },
+    {
+        "name": "Celery",
+        "icon": "🥬",
+        "description": "An allergy to celery, such as chinese or pascal celery",
+        "symptoms": [
+          "Hives",
+          "Swelling of the lips, face, tongue and throat",
+          "Difficulty breathing",
+          "Stomach cramps",
+          "Vomiting"
+        ]
+    },
+    {
+        "name": "Bread",
+        "icon": "🍞",
+        "description": "An allergy to bread, such as brown or rasins bread",
+        "symptoms": [
+          "Hives",
+          "Swelling of the lips, face, tongue and throat",
+          "Difficulty breathing",
+          "Stomach cramps",
+          "Vomiting"
+        ]
+    },
+    {
+        "name": "Fruits",
+        "icon": "🍎",
+        "description": "An allergy to fruits, such as apple or pear",
+        "symptoms": [
+          "Hives",
+          "Swelling of the lips, face, tongue and throat",
+          "Difficulty breathing",
+          "Stomach cramps",
+          "Vomiting"
+        ]
+    }
+  ]
+}

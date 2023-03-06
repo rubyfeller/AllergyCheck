@@ -13,6 +13,8 @@ extension Color {
 }
 
 struct ContentView: View {
+    @State private var showAllergySelectionView = false
+
     var body: some View {
         VStack {
             Image(systemName: "checkmark.square").font(.system(size: 80))
@@ -21,13 +23,16 @@ struct ContentView: View {
                 .font(.largeTitle)
             Text("AllergyCheck")
                 .font(.largeTitle)
-            Text("Your shop buddy for allergens")
+            Text("Your (shop) buddy for allergens")
             Button("Start") {
-                
+                showAllergySelectionView = true
+            }.sheet(isPresented: $showAllergySelectionView) {
+                AllergySelectionView()
             }
             .buttonStyle(.borderedProminent)
             .tint(Color("Secondary"))
             .controlSize(.large)
+            .fontWeight(.bold)
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
