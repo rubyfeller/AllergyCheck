@@ -1,0 +1,124 @@
+{
+    "products": [
+        {
+            "name": "Peanut Butter",
+            "contains": ["peanuts"],
+            "barcode": "0123456789"
+        },
+        {
+            "name": "Whole Milk",
+            "contains": ["milk"],
+            "barcode": "1234567890"
+        },
+        {
+            "name": "Eggs",
+            "contains": ["eggs"],
+            "barcode": "2345678901"
+        },
+        {
+            "name": "Soy Milk",
+            "contains": ["soy", "milk"],
+            "barcode": "3456789012"
+        },
+        {
+            "name": "Whole Wheat Bread",
+            "contains": ["wheat"],
+            "barcode": "4567890123"
+        },
+        {
+            "name": "Salmon Fillet",
+            "contains": ["fish"],
+            "barcode": "5678901234"
+        },
+        {
+            "name": "Celery",
+            "contains": ["celery"],
+            "barcode": "6789012345"
+        },
+        {
+            "name": "Bananas",
+            "contains": ["fruits"],
+            "barcode": "7890123456"
+        },
+        {
+            "name": "Almond Butter",
+            "contains": ["tree nuts"],
+            "barcode": "8901234567"
+        },
+        {
+            "name": "Oatmeal",
+            "contains": ["wheat"],
+            "barcode": "9012345678"
+        },
+        {
+            "name": "Honey",
+            "contains": [],
+            "barcode": "0123456789"
+        },
+        {
+            "name": "Tofu",
+            "contains": ["soy"],
+            "barcode": "1234567890"
+        },
+        {
+            "name": "Sourdough Bread",
+            "contains": ["wheat"],
+            "barcode": "2345678901"
+        },
+        {
+            "name": "Tuna",
+            "contains": ["fish"],
+            "barcode": "3456789012"
+        },
+        {
+            "name": "Carrots",
+            "contains": ["vegetables"],
+            "barcode": "4567890123"
+        },
+        {
+            "name": "Mozzarella Cheese",
+            "contains": ["milk"],
+            "barcode": "5678901234"
+        },
+        {
+            "name": "Cashew Nuts",
+            "contains": ["tree nuts"],
+            "barcode": "6789012345"
+        },
+        {
+            "name": "Blueberries",
+            "contains": ["fruits"],
+            "barcode": "7890123456"
+        },
+        {
+            "name": "Potato Chips",
+            "contains": ["potatoes"],
+            "barcode": "8901234567"
+        },
+        {
+            "name": "Green Beans",
+            "contains": ["vegetables"],
+            "barcode": "9012345678"
+        },
+        {
+            "name": "Cottage Cheese",
+            "contains": ["milk"],
+            "barcode": "0123456789"
+        },
+        {
+            "name": "Sesame Seeds",
+            "contains": ["seeds"],
+            "barcode": "1234567890"
+        },
+        {
+            "name": "White Rice",
+            "contains": ["rice"],
+            "barcode": "2345678901"
+        },
+        {
+            "name": "Peaches",
+            "contains": ["fruits"],
+            "barcode": "3456789012"
+        },
+    ]
+}

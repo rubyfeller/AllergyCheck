@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AllergySelectionView: View {
     
-    private let range: ClosedRange<Int> = 0...8
     @State private var selectedItems: [Int] = []
     
     let allergies: [Allergy]
@@ -23,47 +22,49 @@ struct AllergySelectionView: View {
     }
     
     var body: some View {
-        
-        VStack {
-            Text("Choose your allergies")
-                .foregroundColor(.white)
-                .padding(50)
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
-                ForEach(allergies.indices, id: \.self) { index in
-                    VStack {
-                        Button(allergies[index].icon) {
-                            if let selectedItemIndex = self.selectedItems.firstIndex(of: index) {
-                                selectedItems.remove(at: selectedItemIndex)
-                                print("removed \(index)")
-                            } else {
-                                self.selectedItems.append(index)
-                                print("added \(index)")
-                                print(selectedItems)
+            VStack {
+                Text("Choose your allergies")
+                    .foregroundColor(.white)
+                    .padding(50)
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 0)]) {
+                    ForEach(allergies.indices, id: \.self) { index in
+                        VStack {
+                            Button(allergies[index].icon) {
+                                if let selectedItemIndex = self.selectedItems.firstIndex(of: index) {
+                                    selectedItems.remove(at: selectedItemIndex)
+                                } else {
+                                    self.selectedItems.append(index)
+                                }
                             }
+                            .padding()
+                            .background(self.selectedItems.contains(index) ? Color("Tertiary") : Color("Secondary"))
+                            .cornerRadius(10)
+                            .shadow(color: .black, radius: 0.5, x: 0, y: 0.5)
+                            Text(allergies[index].name)
+                                .font(.caption)
                         }
-                        .padding()
-                        .background(self.selectedItems.contains(index) ? Color("Tertiary") : Color("Secondary"))
-                        .shadow(radius: 30)
-                        .cornerRadius(10)
-                        Text(allergies[index].name)
-                            .font(.caption)
                     }
+                    
                 }
                 
+                NavigationLink(destination: TestView()) {
+                    Text("Continue")
+                }.onTapGesture {
+                    UserDefaults.standard.set(selectedItems, forKey: "Allergies")
+                    print(selectedItems)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color("Secondary"))
+                .cornerRadius(8)
+                .shadow(color: .black, radius: 0.5, x: 0, y: 0.5)
+                .controlSize(.large)
+                .fontWeight(.bold)
             }
-            
-            Button("Continue") {
-                UserDefaults.standard.set(selectedItems, forKey: "Allergies")
-                print(selectedItems)
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(Color("Secondary"))
-            .controlSize(.large)
+            .frame(maxWidth: .infinity)
+            .frame(maxHeight: .infinity)
+            .background(Color("Primary"))
+            .foregroundStyle(.white)
             .fontWeight(.bold)
-        }
-        .frame(maxWidth: .infinity)
-        .frame(maxHeight: .infinity)
-        .background(Color("Primary"))
     }
 }
 

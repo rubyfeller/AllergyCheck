@@ -15,6 +15,9 @@
 		7F53D4ED29B5EE7A00B49667 /* allergies.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F53D4EC29B5EE7900B49667 /* allergies.json */; };
 		7F6108E829B72A70005422CD /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108E729B72A70005422CD /* Allergy.swift */; };
 		7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108E929B72C93005422CD /* Bundle-Decode.swift */; };
+		7F6108EC29B763F7005422CD /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F6108EB29B763F7005422CD /* products.json */; };
+		7F6108F029B768BB005422CD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108EF29B768BB005422CD /* TestView.swift */; };
+		7F6108F229B77375005422CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108F129B77375005422CD /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		7F53D4EC29B5EE7900B49667 /* allergies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = allergies.json; sourceTree = "<group>"; };
 		7F6108E729B72A70005422CD /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
 		7F6108E929B72C93005422CD /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
+		7F6108EB29B763F7005422CD /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		7F6108EF29B768BB005422CD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		7F6108F129B77375005422CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				7F1DAAF529AF7CC3008BF061 /* AllergyCheckApp.swift */,
+				7F6108F129B77375005422CD /* MainView.swift */,
 				7F1DAAF729AF7CC3008BF061 /* ContentView.swift */,
 				7F0EA8CB29B5DD97002B4B1D /* AllergySelectionView.swift */,
+				7F6108EF29B768BB005422CD /* TestView.swift */,
 				7F6108E729B72A70005422CD /* Allergy.swift */,
 				7F6108E929B72C93005422CD /* Bundle-Decode.swift */,
 				7F53D4EC29B5EE7900B49667 /* allergies.json */,
+				7F6108EB29B763F7005422CD /* products.json */,
 				7F1DAAF929AF7CC5008BF061 /* Assets.xcassets */,
 				7F1DAAFB29AF7CC5008BF061 /* Preview Content */,
 			);
@@ -138,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F53D4ED29B5EE7A00B49667 /* allergies.json in Resources */,
+				7F6108EC29B763F7005422CD /* products.json in Resources */,
 				7F1DAAFD29AF7CC5008BF061 /* Preview Assets.xcassets in Resources */,
 				7F1DAAFA29AF7CC5008BF061 /* Assets.xcassets in Resources */,
 			);
@@ -150,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6108F029B768BB005422CD /* TestView.swift in Sources */,
+				7F6108F229B77375005422CD /* MainView.swift in Sources */,
 				7F6108E829B72A70005422CD /* Allergy.swift in Sources */,
 				7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */,
 				7F1DAAF829AF7CC3008BF061 /* ContentView.swift in Sources */,

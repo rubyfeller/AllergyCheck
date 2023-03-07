@@ -13,31 +13,30 @@ extension Color {
 }
 
 struct ContentView: View {
-    @State private var showAllergySelectionView = false
 
     var body: some View {
-        VStack {
-            Image(systemName: "checkmark.square").font(.system(size: 80))
-                .foregroundColor(.green)
-                .padding()
-                .font(.largeTitle)
-            Text("AllergyCheck")
-                .font(.largeTitle)
-            Text("Your (shop) buddy for allergens")
-            Button("Start") {
-                showAllergySelectionView = true
-            }.sheet(isPresented: $showAllergySelectionView) {
-                AllergySelectionView()
+        NavigationView {
+            VStack {
+                Image(systemName: "checkmark.square").font(.system(size: 80))
+                    .foregroundColor(.green)
+                    .padding()
+                    .font(.largeTitle)
+                Text("AllergyCheck")
+                    .font(.largeTitle)
+                Text("Your (shop) buddy for allergens")
+                NavigationLink(destination: AllergySelectionView()) {
+                    Text("Start")
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color("Secondary"))
+                .controlSize(.large)
+                .fontWeight(.bold)
             }
-            .buttonStyle(.borderedProminent)
-            .tint(Color("Secondary"))
-            .controlSize(.large)
-            .fontWeight(.bold)
+            .frame(maxWidth: .infinity)
+            .frame(maxHeight: .infinity)
+            .background(Color("Primary"))
+            .foregroundStyle(.white)
         }
-        .frame(maxWidth: .infinity)
-        .frame(maxHeight: .infinity)
-        .background(Color("Primary"))
-        .foregroundStyle(.white)
     }
 }
 
