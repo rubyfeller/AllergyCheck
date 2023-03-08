@@ -110,15 +110,17 @@
 				7F6108F129B77375005422CD /* MainView.swift */,
 			);
 			name = Views;
-			sourceTree = "<group>";
+			path = AllergyCheck;
+			sourceTree = SOURCE_ROOT;
 		};
 		A2D8306529B866C600D156CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				7F6108E729B72A70005422CD /* Allergy.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
+			name = Model;
+			path = AllergyCheck/Model;
+			sourceTree = SOURCE_ROOT;
 		};
 		A2D8306629B866E200D156CA /* Helpers */ = {
 			isa = PBXGroup;
@@ -127,8 +129,8 @@
 				7F6108E929B72C93005422CD /* Bundle-Decode.swift */,
 			);
 			name = Helpers;
-			path = "New Group1";
-			sourceTree = "<group>";
+			path = "AllergyCheck/New Group1";
+			sourceTree = SOURCE_ROOT;
 		};
 		A2D8306729B866FE00D156CA /* Sounds */ = {
 			isa = PBXGroup;
@@ -136,8 +138,9 @@
 				A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */,
 				A22F8C8129B867C000BCB95B /* SwitchAOn.aif */,
 			);
-			path = Sounds;
-			sourceTree = "<group>";
+			name = Sounds;
+			path = AllergyCheck/Sounds;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
