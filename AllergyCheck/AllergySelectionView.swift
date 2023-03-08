@@ -47,7 +47,7 @@ struct AllergySelectionView: View {
                     
                 }
                 
-                NavigationLink(destination: TestView()) {
+                NavigationLink(destination: SettingsView()) {
                     Text("Continue")
                 }.onTapGesture {
                     UserDefaults.standard.set(selectedItems, forKey: "Allergies")

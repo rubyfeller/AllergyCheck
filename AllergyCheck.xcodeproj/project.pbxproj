@@ -18,6 +18,12 @@
 		7F6108EC29B763F7005422CD /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F6108EB29B763F7005422CD /* products.json */; };
 		7F6108F029B768BB005422CD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108EF29B768BB005422CD /* TestView.swift */; };
 		7F6108F229B77375005422CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108F129B77375005422CD /* MainView.swift */; };
+		A22F8C8229B867C000BCB95B /* SwitchAOff.aif in Resources */ = {isa = PBXBuildFile; fileRef = A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */; };
+		A22F8C8329B867C000BCB95B /* SwitchAOn.aif in Resources */ = {isa = PBXBuildFile; fileRef = A22F8C8129B867C000BCB95B /* SwitchAOn.aif */; };
+		A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8429B867D300BCB95B /* PlaySound.swift */; };
+		A22F8C8829B867EA00BCB95B /* NightModeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */; };
+		A22F8C8929B867EA00BCB95B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8729B867EA00BCB95B /* SettingsView.swift */; };
+		A22F8C8B29B867FD00BCB95B /* AllergySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +34,17 @@
 		7F1DAAF929AF7CC5008BF061 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F1DAAFC29AF7CC5008BF061 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F53D4EC29B5EE7900B49667 /* allergies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = allergies.json; sourceTree = "<group>"; };
-		7F6108E729B72A70005422CD /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
+		7F6108E729B72A70005422CD /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Allergy.swift; path = ../Allergy.swift; sourceTree = "<group>"; };
 		7F6108E929B72C93005422CD /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
 		7F6108EB29B763F7005422CD /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		7F6108EF29B768BB005422CD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		7F6108F129B77375005422CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwitchAOff.aif; sourceTree = "<group>"; };
+		A22F8C8129B867C000BCB95B /* SwitchAOn.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwitchAOn.aif; sourceTree = "<group>"; };
+		A22F8C8429B867D300BCB95B /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightModeSettingsView.swift; sourceTree = "<group>"; };
+		A22F8C8729B867EA00BCB95B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergySettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,13 +77,11 @@
 		7F1DAAF429AF7CC3008BF061 /* AllergyCheck */ = {
 			isa = PBXGroup;
 			children = (
+				A2D8306729B866FE00D156CA /* Sounds */,
+				A2D8306629B866E200D156CA /* Helpers */,
+				A2D8306529B866C600D156CA /* Model */,
+				A2CE6EB229B8663F006C0E47 /* Views */,
 				7F1DAAF529AF7CC3008BF061 /* AllergyCheckApp.swift */,
-				7F6108F129B77375005422CD /* MainView.swift */,
-				7F1DAAF729AF7CC3008BF061 /* ContentView.swift */,
-				7F0EA8CB29B5DD97002B4B1D /* AllergySelectionView.swift */,
-				7F6108EF29B768BB005422CD /* TestView.swift */,
-				7F6108E729B72A70005422CD /* Allergy.swift */,
-				7F6108E929B72C93005422CD /* Bundle-Decode.swift */,
 				7F53D4EC29B5EE7900B49667 /* allergies.json */,
 				7F6108EB29B763F7005422CD /* products.json */,
 				7F1DAAF929AF7CC5008BF061 /* Assets.xcassets */,
@@ -86,6 +96,47 @@
 				7F1DAAFC29AF7CC5008BF061 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2CE6EB229B8663F006C0E47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */,
+				A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */,
+				A22F8C8729B867EA00BCB95B /* SettingsView.swift */,
+				7F6108EF29B768BB005422CD /* TestView.swift */,
+				7F0EA8CB29B5DD97002B4B1D /* AllergySelectionView.swift */,
+				7F1DAAF729AF7CC3008BF061 /* ContentView.swift */,
+				7F6108F129B77375005422CD /* MainView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A2D8306529B866C600D156CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F6108E729B72A70005422CD /* Allergy.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2D8306629B866E200D156CA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A22F8C8429B867D300BCB95B /* PlaySound.swift */,
+				7F6108E929B72C93005422CD /* Bundle-Decode.swift */,
+			);
+			name = Helpers;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		A2D8306729B866FE00D156CA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */,
+				A22F8C8129B867C000BCB95B /* SwitchAOn.aif */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +199,10 @@
 			files = (
 				7F53D4ED29B5EE7A00B49667 /* allergies.json in Resources */,
 				7F6108EC29B763F7005422CD /* products.json in Resources */,
+				A22F8C8229B867C000BCB95B /* SwitchAOff.aif in Resources */,
 				7F1DAAFD29AF7CC5008BF061 /* Preview Assets.xcassets in Resources */,
 				7F1DAAFA29AF7CC5008BF061 /* Assets.xcassets in Resources */,
+				A22F8C8329B867C000BCB95B /* SwitchAOn.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,12 +214,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6108F029B768BB005422CD /* TestView.swift in Sources */,
+				A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */,
+				A22F8C8829B867EA00BCB95B /* NightModeSettingsView.swift in Sources */,
 				7F6108F229B77375005422CD /* MainView.swift in Sources */,
 				7F6108E829B72A70005422CD /* Allergy.swift in Sources */,
+				A22F8C8929B867EA00BCB95B /* SettingsView.swift in Sources */,
 				7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */,
 				7F1DAAF829AF7CC3008BF061 /* ContentView.swift in Sources */,
 				7F0EA8CC29B5DD97002B4B1D /* AllergySelectionView.swift in Sources */,
 				7F1DAAF629AF7CC3008BF061 /* AllergyCheckApp.swift in Sources */,
+				A22F8C8B29B867FD00BCB95B /* AllergySettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AllergyCheck/Preview Content\"";
+				DEVELOPMENT_TEAM = H6M7683547;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -323,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AllergyCheck/Preview Content\"";
+				DEVELOPMENT_TEAM = H6M7683547;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
