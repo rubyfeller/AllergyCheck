@@ -77,13 +77,12 @@
 		7F1DAAF429AF7CC3008BF061 /* AllergyCheck */ = {
 			isa = PBXGroup;
 			children = (
+				A22F8C9029B86B0300BCB95B /* Data */,
 				A22F8C8F29B86ABA00BCB95B /* Model */,
 				A22F8C8D29B86A8D00BCB95B /* Helpers */,
 				A22F8C8C29B86A5100BCB95B /* Views */,
 				A2D8306729B866FE00D156CA /* Sounds */,
 				7F1DAAF529AF7CC3008BF061 /* AllergyCheckApp.swift */,
-				7F53D4EC29B5EE7900B49667 /* allergies.json */,
-				7F6108EB29B763F7005422CD /* products.json */,
 				7F1DAAF929AF7CC5008BF061 /* Assets.xcassets */,
 				7F1DAAFB29AF7CC5008BF061 /* Preview Content */,
 			);
@@ -127,6 +126,15 @@
 				7F6108E729B72A70005422CD /* Allergy.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A22F8C9029B86B0300BCB95B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7F6108EB29B763F7005422CD /* products.json */,
+				7F53D4EC29B5EE7900B49667 /* allergies.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		A2D8306729B866FE00D156CA /* Sounds */ = {
