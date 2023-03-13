@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-let defaults = UserDefaults.standard
+var defaults = UserDefaults.standard
+var allergies = defaults.array(forKey: "Allergies") as? [String]
 
 struct AllergySettingsView: View {
     
@@ -31,82 +32,100 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🥛 Milk", isOn: $milk)
                             .onChange(of: milk, perform: { (value) in
-                                setAllergie(allergie: "milk", value: value)
+                                setAllergie(allergie: "Milk", value: value)
                             })
                             .onAppear() {
-                                milk = defaults.bool(forKey: "milk")
+                                if allergies?.contains("Milk") == true {
+                                    milk = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🥜 Nuts", isOn: $nuts)
                             .onChange(of: nuts, perform: { (value) in
-                                setAllergie(allergie: "nuts", value: value)
+                                setAllergie(allergie: "Nuts", value: value)
                             })
                             .onAppear() {
-                                nuts = defaults.bool(forKey: "nuts")
+                                if allergies?.contains("Nuts") == true {
+                                    nuts = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🍎 Fruits", isOn: $fruits)
                             .onChange(of: fruits, perform: { (value) in
-                                setAllergie(allergie: "fruits", value: value)
+                                setAllergie(allergie: "Fruits", value: value)
                             })
                             .onAppear() {
-                                fruits = defaults.bool(forKey: "fruits")
+                                if allergies?.contains("Fruits") == true {
+                                    fruits = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🍞 Bread", isOn: $bread)
                             .onChange(of: bread, perform: { (value) in
-                                setAllergie(allergie: "bread", value: value)
+                                setAllergie(allergie: "Bread", value: value)
                             })
                             .onAppear() {
-                                bread = defaults.bool(forKey: "bread")
+                                if allergies?.contains("Bread") == true {
+                                    bread = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🌾 Wheat", isOn: $wheat)
                             .onChange(of: wheat, perform: { (value) in
-                                setAllergie(allergie: "wheat", value: value)
+                                setAllergie(allergie: "Wheat", value: value)
                             })
                             .onAppear() {
-                                wheat = defaults.bool(forKey: "wheat")
+                                if allergies?.contains("Wheat") == true {
+                                    wheat = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🐟 Fish", isOn: $fish)
                             .onChange(of: fish, perform: { (value) in
-                                setAllergie(allergie: "fish", value: value)
+                                setAllergie(allergie: "Fish", value: value)
                             })
                             .onAppear() {
-                                fish = defaults.bool(forKey: "fish")
+                                if allergies?.contains("Fish") == true {
+                                    fish = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🫘 Beans", isOn: $beans)
                             .onChange(of: beans, perform: { (value) in
-                                setAllergie(allergie: "beans", value: value)
+                                setAllergie(allergie: "Beans", value: value)
                             })
                             .onAppear() {
-                                beans = defaults.bool(forKey: "beans")
+                                if allergies?.contains("Beans") == true {
+                                    beans = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🥚 Eggs", isOn: $eggs)
                             .onChange(of: eggs, perform: { (value) in
-                                setAllergie(allergie: "eggs", value: value)
+                                setAllergie(allergie: "Eggs", value: value)
                             })
                             .onAppear() {
-                                eggs = defaults.bool(forKey: "eggs")
+                                if allergies?.contains("Eggs") == true {
+                                    eggs = true
+                                }
                             }
                     }
                     HStack {
                         Toggle("🥬 Celery", isOn: $celery)
                             .onChange(of: celery, perform: { (value) in
-                                setAllergie(allergie: "celery", value: value)
+                                setAllergie(allergie: "Celery", value: value)
                             })
                             .onAppear() {
-                                celery = defaults.bool(forKey: "celery")
+                                if allergies?.contains("Celery") == true {
+                                    celery = true
+                                }
                             }
                     }
                     
@@ -120,16 +139,19 @@ struct AllergySettingsView: View {
 }
 
 func setAllergie(allergie: String, value: Bool) {
-    if value == true {
-        defaults.set(value, forKey: allergie)
-        playSound(sound: "SwitchAOn")
-    }
-    else if value == false {
-        defaults.set(value, forKey: allergie)
+    if value == false {
+        allergies = allergies?.filter({$0 != allergie})
+        defaults.set(allergies, forKey: "Allergies")
         playSound(sound: "SwitchAOff")
     }
+    else {
+        if allergies?.contains(allergie) == false  {
+            allergies?.append(allergie)
+            defaults.set(allergies, forKey: "Allergies")
+            playSound(sound: "SwitchAOn")
+        }
+    }
 }
-
 
 struct AllergySettingsView_Previews: PreviewProvider {
     static var previews: some View {
