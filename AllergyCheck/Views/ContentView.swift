@@ -36,6 +36,7 @@ struct ContentView: View {
             .frame(maxHeight: .infinity)
             .background(Color("Primary"))
             .foregroundStyle(.white)
+            .toolbar(.hidden)
         }
     }
 }

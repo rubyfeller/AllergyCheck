@@ -65,6 +65,7 @@ struct AllergySelectionView: View {
             .background(Color("Primary"))
             .foregroundStyle(.white)
             .fontWeight(.bold)
+            .toolbar(.hidden)
     }
 }
 
