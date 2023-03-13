@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7F0EA8CC29B5DD97002B4B1D /* AllergySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0EA8CB29B5DD97002B4B1D /* AllergySelectionView.swift */; };
+		7F18227E29BF147400849836 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18227D29BF147400849836 /* ScanView.swift */; };
+		7F18228029BF1AEE00849836 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18227F29BF1AEE00849836 /* Product.swift */; };
+		7F18228429BF214300849836 /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18228329BF214300849836 /* ScanViewModel.swift */; };
 		7F1DAAF629AF7CC3008BF061 /* AllergyCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DAAF529AF7CC3008BF061 /* AllergyCheckApp.swift */; };
 		7F1DAAF829AF7CC3008BF061 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DAAF729AF7CC3008BF061 /* ContentView.swift */; };
 		7F1DAAFA29AF7CC5008BF061 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F1DAAF929AF7CC5008BF061 /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 
 /* Begin PBXFileReference section */
 		7F0EA8CB29B5DD97002B4B1D /* AllergySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergySelectionView.swift; sourceTree = "<group>"; };
+		7F18227D29BF147400849836 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		7F18227F29BF1AEE00849836 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		7F18228329BF214300849836 /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 		7F1DAAF229AF7CC3008BF061 /* AllergyCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllergyCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F1DAAF529AF7CC3008BF061 /* AllergyCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergyCheckApp.swift; sourceTree = "<group>"; };
 		7F1DAAF729AF7CC3008BF061 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 				A22F8C8729B867EA00BCB95B /* SettingsView.swift */,
 				A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */,
 				A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */,
+				7F18227D29BF147400849836 /* ScanView.swift */,
+				7F18228329BF214300849836 /* ScanViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				7F6108E729B72A70005422CD /* Allergy.swift */,
+				7F18227F29BF1AEE00849836 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,12 +235,15 @@
 				A22F8C8829B867EA00BCB95B /* NightModeSettingsView.swift in Sources */,
 				7F6108F229B77375005422CD /* MainView.swift in Sources */,
 				7F6108E829B72A70005422CD /* Allergy.swift in Sources */,
+				7F18228429BF214300849836 /* ScanViewModel.swift in Sources */,
+				7F18227E29BF147400849836 /* ScanView.swift in Sources */,
 				A22F8C8929B867EA00BCB95B /* SettingsView.swift in Sources */,
 				7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */,
 				7F1DAAF829AF7CC3008BF061 /* ContentView.swift in Sources */,
 				7F0EA8CC29B5DD97002B4B1D /* AllergySelectionView.swift in Sources */,
 				7F1DAAF629AF7CC3008BF061 /* AllergyCheckApp.swift in Sources */,
 				A22F8C8B29B867FD00BCB95B /* AllergySettingsView.swift in Sources */,
+				7F18228029BF1AEE00849836 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

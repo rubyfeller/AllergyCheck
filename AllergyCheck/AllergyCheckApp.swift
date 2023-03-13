@@ -11,7 +11,7 @@ import SwiftUI
 struct AllergyCheckApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ScanView()
         }
     }
 }
