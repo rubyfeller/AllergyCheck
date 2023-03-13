@@ -11,6 +11,8 @@ struct AllergySelectionView: View {
     
     @State private var selectedItems: [String] = []
     
+    @Environment(\.colorScheme) var colorScheme
+    
     let allergies: [Allergy]
     
     init() {
@@ -48,10 +50,11 @@ struct AllergySelectionView: View {
                     
                 }
                 
-                NavigationLink(destination: SettingsView()) {
+                NavigationLink(destination: MainView()) {
                     Text("Continue")
                 }.simultaneousGesture(TapGesture().onEnded {
                     UserDefaults.standard.set(selectedItems, forKey: "Allergies")
+                    UserDefaults.standard.set(true, forKey: "Onboarding")
                     print(selectedItems)
                 })
                 .buttonStyle(.borderedProminent)
@@ -63,10 +66,10 @@ struct AllergySelectionView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: .infinity)
-            .background(Color("Primary"))
+            .background(colorScheme == .dark ? Color.black : Color("Primary"))
             .foregroundStyle(.white)
             .fontWeight(.bold)
-            .toolbar(.hidden)
+            .navigationBarBackButtonHidden(true)
     }
 }
 
