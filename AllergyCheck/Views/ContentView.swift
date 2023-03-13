@@ -39,7 +39,7 @@ struct ContentView: View {
             .background(colorScheme == .dark ? Color.black : Color("Primary"))
             .background(Color("Primary"))
             .foregroundStyle(.white)
-            .toolbar(.hidden)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
