@@ -14,6 +14,8 @@ extension Color {
 
 struct ContentView: View {
 
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -34,9 +36,10 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: .infinity)
+            .background(colorScheme == .dark ? Color.black : Color("Primary"))
             .background(Color("Primary"))
             .foregroundStyle(.white)
-            .toolbar(.hidden)
+            .navigationBarBackButtonHidden(true)
         }
     }
 }

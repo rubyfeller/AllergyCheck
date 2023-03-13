@@ -19,12 +19,10 @@
 		7F6108E829B72A70005422CD /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108E729B72A70005422CD /* Allergy.swift */; };
 		7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108E929B72C93005422CD /* Bundle-Decode.swift */; };
 		7F6108EC29B763F7005422CD /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F6108EB29B763F7005422CD /* products.json */; };
-		7F6108F029B768BB005422CD /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108EF29B768BB005422CD /* TestView.swift */; };
 		7F6108F229B77375005422CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108F129B77375005422CD /* MainView.swift */; };
 		A22F8C8229B867C000BCB95B /* SwitchAOff.aif in Resources */ = {isa = PBXBuildFile; fileRef = A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */; };
 		A22F8C8329B867C000BCB95B /* SwitchAOn.aif in Resources */ = {isa = PBXBuildFile; fileRef = A22F8C8129B867C000BCB95B /* SwitchAOn.aif */; };
 		A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8429B867D300BCB95B /* PlaySound.swift */; };
-		A22F8C8829B867EA00BCB95B /* NightModeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */; };
 		A22F8C8929B867EA00BCB95B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8729B867EA00BCB95B /* SettingsView.swift */; };
 		A22F8C8B29B867FD00BCB95B /* AllergySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */; };
 /* End PBXBuildFile section */
@@ -43,12 +41,10 @@
 		7F6108E729B72A70005422CD /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
 		7F6108E929B72C93005422CD /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
 		7F6108EB29B763F7005422CD /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
-		7F6108EF29B768BB005422CD /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		7F6108F129B77375005422CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwitchAOff.aif; sourceTree = "<group>"; };
 		A22F8C8129B867C000BCB95B /* SwitchAOn.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwitchAOn.aif; sourceTree = "<group>"; };
 		A22F8C8429B867D300BCB95B /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
-		A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightModeSettingsView.swift; sourceTree = "<group>"; };
 		A22F8C8729B867EA00BCB95B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergySettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,9 +105,7 @@
 				7F6108F129B77375005422CD /* MainView.swift */,
 				7F1DAAF729AF7CC3008BF061 /* ContentView.swift */,
 				7F0EA8CB29B5DD97002B4B1D /* AllergySelectionView.swift */,
-				7F6108EF29B768BB005422CD /* TestView.swift */,
 				A22F8C8729B867EA00BCB95B /* SettingsView.swift */,
-				A22F8C8629B867E500BCB95B /* NightModeSettingsView.swift */,
 				A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */,
 				7F18227D29BF147400849836 /* ScanView.swift */,
 				7F18228329BF214300849836 /* ScanViewModel.swift */,
@@ -230,9 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F6108F029B768BB005422CD /* TestView.swift in Sources */,
 				A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */,
-				A22F8C8829B867EA00BCB95B /* NightModeSettingsView.swift in Sources */,
 				7F6108F229B77375005422CD /* MainView.swift in Sources */,
 				7F6108E829B72A70005422CD /* Allergy.swift in Sources */,
 				7F18228429BF214300849836 /* ScanViewModel.swift in Sources */,

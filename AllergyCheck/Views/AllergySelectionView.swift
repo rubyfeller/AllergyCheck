@@ -9,7 +9,9 @@ import SwiftUI
 
 struct AllergySelectionView: View {
     
-    @State private var selectedItems: [Int] = []
+    @State private var selectedItems: [String] = []
+    
+    @Environment(\.colorScheme) var colorScheme
     
     let allergies: [Allergy]
     
@@ -30,14 +32,15 @@ struct AllergySelectionView: View {
                     ForEach(allergies.indices, id: \.self) { index in
                         VStack {
                             Button(allergies[index].icon) {
-                                if let selectedItemIndex = self.selectedItems.firstIndex(of: index) {
+                                if let selectedItemIndex = self.selectedItems.firstIndex(of: allergies[index].name) {
                                     selectedItems.remove(at: selectedItemIndex)
                                 } else {
-                                    self.selectedItems.append(index)
+                                    self.selectedItems.append(allergies[index].name)
+                                    print(selectedItems)
                                 }
                             }
                             .padding()
-                            .background(self.selectedItems.contains(index) ? Color("Tertiary") : Color("Secondary"))
+                            .background(self.selectedItems.contains(allergies[index].name) ? Color("Tertiary") : Color("Secondary"))
                             .cornerRadius(10)
                             .shadow(color: .black, radius: 0.5, x: 0, y: 0.5)
                             Text(allergies[index].name)
@@ -47,12 +50,13 @@ struct AllergySelectionView: View {
                     
                 }
                 
-                NavigationLink(destination: SettingsView()) {
+                NavigationLink(destination: MainView()) {
                     Text("Continue")
-                }.onTapGesture {
+                }.simultaneousGesture(TapGesture().onEnded {
                     UserDefaults.standard.set(selectedItems, forKey: "Allergies")
+                    UserDefaults.standard.set(true, forKey: "Onboarding")
                     print(selectedItems)
-                }
+                })
                 .buttonStyle(.borderedProminent)
                 .tint(Color("Secondary"))
                 .cornerRadius(8)
@@ -62,10 +66,10 @@ struct AllergySelectionView: View {
             }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: .infinity)
-            .background(Color("Primary"))
+            .background(colorScheme == .dark ? Color.black : Color("Primary"))
             .foregroundStyle(.white)
             .fontWeight(.bold)
-            .toolbar(.hidden)
+            .navigationBarBackButtonHidden(true)
     }
 }
 

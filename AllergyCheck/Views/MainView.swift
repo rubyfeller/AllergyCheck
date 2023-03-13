@@ -12,13 +12,14 @@ struct MainView: View {
         TabView {
             ContentView()
                 .tabItem {
-                    Label("Home", systemImage: "barcode.viewfinder")
+                    Label("Scanner", systemImage: "barcode.viewfinder")
                 }
-            TestView()
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

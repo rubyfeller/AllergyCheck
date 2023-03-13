@@ -9,16 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
+        NavigationView {
             Form {
-                Section {
-                    NavigationLink {
-                        NightModeSettingsView()
-                    } label: {
-                        Text("🌙 Night mode Settings")
-                    }
-                } header: {
-                    Text("General settings")
-                }
                 Section {
                     NavigationLink {
                         AllergySettingsView()
@@ -30,6 +22,7 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+        }
     }
 }
 
