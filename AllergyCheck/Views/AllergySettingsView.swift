@@ -87,10 +87,10 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🐟 Fish", isOn: $fish)
                             .onChange(of: fish, perform: { (value) in
-                                setAllergie(allergie: "Fish", value: value)
+                                setAllergie(allergie: "en:fish", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Fish") == true {
+                                if allergies?.contains("en:fish") == true {
                                     fish = true
                                 }
                             }

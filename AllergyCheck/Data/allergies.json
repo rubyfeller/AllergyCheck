@@ -61,7 +61,7 @@
       ]
     },
     {
-      "name": "Fish",
+      "name": "en:fish",
       "icon": "🐟",
       "description": "An allergy to fish, such as salmon or tuna",
       "symptoms": [

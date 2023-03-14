@@ -42,7 +42,12 @@ import Foundation
                     let response = try JSONDecoder().decode(Response.self, from: data)
                     DispatchQueue.main.async {
                         self.response.append(response)
-                        self.products.append(response.product)
+                        if ((response.product) != nil) {
+                            for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
+                                print("\(key) = \(value) \n")
+                            }
+                            self.products.append(response.product!)
+                        }
                     }
                 } catch {
                     DispatchQueue.main.async {

@@ -9,7 +9,7 @@ import Foundation
 
 struct Response: Codable {
     let code: String
-    let product: Product
+    let product: Product?
     let status: Int
     let statusVerbose: String
     
@@ -21,13 +21,15 @@ struct Response: Codable {
 
 struct Product: Hashable, Codable {
     let id: String
-    let allergens, allergensFromIngredients, allergensFromUser: String
-    let allergensHierarchy: [String]
-    let allergensLc: String
-    let allergensTags: [String]
-    let brands: String
-    let brandsTags: [String]
-    let imageURL: String
+    let allergens, allergensFromIngredients, allergensFromUser: String?
+    let allergensHierarchy: [String]?
+    let allergensLc: String?
+    let allergensTags: [String]?
+    let brands: String?
+    let brandsTags: [String]?
+    let imageURL: String?
+    let productName: String?
+
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case allergens
@@ -39,5 +41,6 @@ struct Product: Hashable, Codable {
         case brands
         case brandsTags = "brands_tags"
         case imageURL = "image_url"
+        case productName = "product_name"
     }
 }
