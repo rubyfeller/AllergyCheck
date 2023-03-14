@@ -25,6 +25,8 @@
 		A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8429B867D300BCB95B /* PlaySound.swift */; };
 		A22F8C8929B867EA00BCB95B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8729B867EA00BCB95B /* SettingsView.swift */; };
 		A22F8C8B29B867FD00BCB95B /* AllergySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */; };
+		A2D540E729C068AF00B6AB2D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D540E629C068AF00B6AB2D /* CameraView.swift */; };
+		A2D540EA29C06EE200B6AB2D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = A2D540E929C06EE200B6AB2D /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,7 @@
 		A22F8C8429B867D300BCB95B /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		A22F8C8729B867EA00BCB95B /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergySettingsView.swift; sourceTree = "<group>"; };
+		A2D540E629C068AF00B6AB2D /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D540EA29C06EE200B6AB2D /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +113,7 @@
 				A22F8C8A29B867FD00BCB95B /* AllergySettingsView.swift */,
 				7F18227D29BF147400849836 /* ScanView.swift */,
 				7F18228329BF214300849836 /* ScanViewModel.swift */,
+				A2D540E629C068AF00B6AB2D /* CameraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +171,9 @@
 			dependencies = (
 			);
 			name = AllergyCheck;
+			packageProductDependencies = (
+				A2D540E929C06EE200B6AB2D /* CodeScanner */,
+			);
 			productName = AllergyCheck;
 			productReference = 7F1DAAF229AF7CC3008BF061 /* AllergyCheck.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 7F1DAAE929AF7CC3008BF061;
+			packageReferences = (
+				A2D540E829C06EE200B6AB2D /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 7F1DAAF329AF7CC3008BF061 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -226,6 +237,7 @@
 			files = (
 				A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */,
 				7F6108F229B77375005422CD /* MainView.swift in Sources */,
+				A2D540E729C068AF00B6AB2D /* CameraView.swift in Sources */,
 				7F6108E829B72A70005422CD /* Allergy.swift in Sources */,
 				7F18228429BF214300849836 /* ScanViewModel.swift in Sources */,
 				7F18227E29BF147400849836 /* ScanView.swift in Sources */,
@@ -367,6 +379,7 @@
 				DEVELOPMENT_TEAM = H6M7683547;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"Please accept permissions for scanning barcodes\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -396,6 +409,7 @@
 				DEVELOPMENT_TEAM = H6M7683547;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"Please accept permissions for scanning barcodes\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,6 +450,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A2D540E829C06EE200B6AB2D /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A2D540E929C06EE200B6AB2D /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2D540E829C06EE200B6AB2D /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F1DAAEA29AF7CC3008BF061 /* Project object */;
 }
