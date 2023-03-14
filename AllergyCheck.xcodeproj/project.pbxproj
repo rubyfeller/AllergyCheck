@@ -20,6 +20,7 @@
 		7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108E929B72C93005422CD /* Bundle-Decode.swift */; };
 		7F6108EC29B763F7005422CD /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F6108EB29B763F7005422CD /* products.json */; };
 		7F6108F229B77375005422CD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6108F129B77375005422CD /* MainView.swift */; };
+		7F9D42C629C0B33B009A9178 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D42C529C0B33B009A9178 /* ResultView.swift */; };
 		A22F8C8229B867C000BCB95B /* SwitchAOff.aif in Resources */ = {isa = PBXBuildFile; fileRef = A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */; };
 		A22F8C8329B867C000BCB95B /* SwitchAOn.aif in Resources */ = {isa = PBXBuildFile; fileRef = A22F8C8129B867C000BCB95B /* SwitchAOn.aif */; };
 		A22F8C8529B867D400BCB95B /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F8C8429B867D300BCB95B /* PlaySound.swift */; };
@@ -44,6 +45,7 @@
 		7F6108E929B72C93005422CD /* Bundle-Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decode.swift"; sourceTree = "<group>"; };
 		7F6108EB29B763F7005422CD /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		7F6108F129B77375005422CD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7F9D42C529C0B33B009A9178 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		A22F8C8029B867BF00BCB95B /* SwitchAOff.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwitchAOff.aif; sourceTree = "<group>"; };
 		A22F8C8129B867C000BCB95B /* SwitchAOn.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwitchAOn.aif; sourceTree = "<group>"; };
 		A22F8C8429B867D300BCB95B /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				7F18227D29BF147400849836 /* ScanView.swift */,
 				7F18228329BF214300849836 /* ScanViewModel.swift */,
 				A2D540E629C068AF00B6AB2D /* CameraView.swift */,
+				7F9D42C529C0B33B009A9178 /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				A2D540E729C068AF00B6AB2D /* CameraView.swift in Sources */,
 				7F6108E829B72A70005422CD /* Allergy.swift in Sources */,
 				7F18228429BF214300849836 /* ScanViewModel.swift in Sources */,
+				7F9D42C629C0B33B009A9178 /* ResultView.swift in Sources */,
 				7F18227E29BF147400849836 /* ScanView.swift in Sources */,
 				A22F8C8929B867EA00BCB95B /* SettingsView.swift in Sources */,
 				7F6108EA29B72C93005422CD /* Bundle-Decode.swift in Sources */,
@@ -376,7 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AllergyCheck/Preview Content\"";
-				DEVELOPMENT_TEAM = H6M7683547;
+				DEVELOPMENT_TEAM = 5CS6D292QN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "\"Please accept permissions for scanning barcodes\"";
@@ -406,7 +410,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AllergyCheck/Preview Content\"";
-				DEVELOPMENT_TEAM = H6M7683547;
+				DEVELOPMENT_TEAM = 5CS6D292QN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "\"Please accept permissions for scanning barcodes\"";

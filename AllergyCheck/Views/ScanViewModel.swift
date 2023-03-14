@@ -17,10 +17,6 @@ import Foundation
     
     private let baseURL = "https://world.openfoodfacts.org/api/v2/product/"
     
-    init() {
-        getProductBasedOnBarcode(barcode: barcode)
-    }
-    
     func getProductBasedOnBarcode(barcode: String) {
         
         print("barcode : \(barcode)")
@@ -41,11 +37,12 @@ import Foundation
                 do {
                     let response = try JSONDecoder().decode(Response.self, from: data)
                     DispatchQueue.main.async {
+                        print(response)
                         self.response.append(response)
                         if ((response.product) != nil) {
-                            for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
-                                print("\(key) = \(value) \n")
-                            }
+//                            for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
+//                                print("\(key) = \(value) \n")
+//                            }
                             self.products.append(response.product!)
                         }
                     }

@@ -9,8 +9,10 @@ import SwiftUI
 import CodeScanner
 
 struct CameraView: View {
-    @State private var isPresentingScanner = false
+    @State private var isPresentingScanner = true
     @State private var scannedCode: String = "Scan a product barcode to get started."
+    @StateObject var viewModel = ScanViewModel()
+    @State private var showResultView = false
     
     var scannerSheet: some View {
         CodeScannerView(
@@ -18,6 +20,8 @@ struct CameraView: View {
             completion: { result in
                 if case let .success(code) = result {
                     self.scannedCode = code.string
+                    self.showResultView = true
+                    viewModel.getProductBasedOnBarcode(barcode: code.string)
                     self.isPresentingScanner = false
                 }
             }
@@ -25,17 +29,10 @@ struct CameraView: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 10) {
-                Text(scannedCode)
-                Button("Scan Product barcode") {
-                    self.isPresentingScanner = true
-                }
-                .sheet(isPresented: $isPresentingScanner) {
-                    self.scannerSheet
-                }
-            }
-            .navigationTitle("Scanner")
+        if (showResultView) {
+            ResultView(barcode: $scannedCode)
+        } else {
+            self.scannerSheet
         }
     }
 }
