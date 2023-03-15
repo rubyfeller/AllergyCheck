@@ -13,7 +13,7 @@ let onboarding = UserDefaults.standard
 struct AllergyCheckApp: App {
     var body: some Scene {
         WindowGroup {
-            if (onboarding.bool(forKey: "Onboarding") == false) {
+            if (onboarding.bool(forKey: "Onboarding") == true) {
                 ContentView()
             }
             else {

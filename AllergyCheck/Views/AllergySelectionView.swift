@@ -43,7 +43,7 @@ struct AllergySelectionView: View {
                             .background(self.selectedItems.contains(allergies[index].name) ? Color("Tertiary") : Color("Secondary"))
                             .cornerRadius(10)
                             .shadow(color: .black, radius: 0.5, x: 0, y: 0.5)
-                            Text(allergies[index].name)
+                            Text(allergies[index].displayName)
                                 .font(.caption)
                         }
                     }
