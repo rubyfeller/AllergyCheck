@@ -1,7 +1,7 @@
 {
   "allergies": [
     {
-      "name": "Peanuts",
+      "name": "en:peanuts",
       "icon": "🥜",
       "description": "An allergy to peanuts, a common ingredient in many foods",
       "symptoms": [
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "name": "Milk",
+      "name": "en:milk",
       "icon": "🥛",
       "description": "An allergy to milk or dairy products",
       "symptoms": [
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "name": "Eggs",
+      "name": "en:eggs",
       "icon": "🥚",
       "description": "An allergy to eggs or egg products",
       "symptoms": [
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "name": "Soy",
+      "name": "en:soybeans",
       "icon": "🫘",
       "description": "An allergy to soy or soy products",
       "symptoms": [
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "name": "Wheat",
+      "name": "en:wheat",
       "icon": "🌾",
       "description": "An allergy to wheat or wheat products",
       "symptoms": [
@@ -73,7 +73,7 @@
       ]
     },
     {
-        "name": "Celery",
+        "name": "en:celery",
         "icon": "🥬",
         "description": "An allergy to celery, such as chinese or pascal celery",
         "symptoms": [
@@ -85,7 +85,7 @@
         ]
     },
     {
-        "name": "Bread",
+        "name": "en:breadcrumb",
         "icon": "🍞",
         "description": "An allergy to bread, such as brown or rasins bread",
         "symptoms": [
@@ -97,8 +97,8 @@
         ]
     },
     {
-        "name": "Fruits",
-        "icon": "🍎",
+        "name": "en:nuts",
+        "icon": "🌰",
         "description": "An allergy to fruits, such as apple or pear",
         "symptoms": [
           "Hives",

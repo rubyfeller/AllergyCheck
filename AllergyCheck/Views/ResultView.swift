@@ -12,6 +12,7 @@ struct ResultView: View {
     @Binding var barcode: String
     @State private var allergen = ""
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.dismiss) var dismiss
     
     func checkForAllergy(allergiesArray: Array<String>?, product: Product) -> String {
         // Get the 'Allergies' array from UserDefaults
@@ -41,6 +42,10 @@ struct ResultView: View {
                 else {
                     Text("Product has been found 🥳")
                         .font(.title)
+                    Text("Please always check the productlabel")
+                        .foregroundColor(.red)
+                        .font(.caption)
+                        .padding()
                     ForEach(viewModel.products, id: \.id) { product in
                         Text(product.productName ?? "Unknown productname")
                             .font(.title3)
@@ -56,10 +61,18 @@ struct ResultView: View {
                             } placeholder: {
                                 ProgressView()
                             }
+                            .padding()
                         }
+                    }
+                    Button("New scan") {
+                        dismiss()
                     }
                 }
             }
+            .buttonStyle(.borderedProminent)
+            .tint(Color("Secondary"))
+            .controlSize(.large)
+            .fontWeight(.bold)
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)

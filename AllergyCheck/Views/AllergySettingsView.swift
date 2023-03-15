@@ -32,32 +32,32 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🥛 Milk", isOn: $milk)
                             .onChange(of: milk, perform: { (value) in
-                                setAllergie(allergie: "Milk", value: value)
+                                setAllergie(allergie: "en:milk", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Milk") == true {
+                                if allergies?.contains("en:milk") == true {
                                     milk = true
                                 }
                             }
                     }
                     HStack {
-                        Toggle("🥜 Nuts", isOn: $nuts)
+                        Toggle("🥜 Peanuts", isOn: $nuts)
                             .onChange(of: nuts, perform: { (value) in
-                                setAllergie(allergie: "Nuts", value: value)
+                                setAllergie(allergie: "en:peanuts", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Nuts") == true {
+                                if allergies?.contains("en:peanuts") == true {
                                     nuts = true
                                 }
                             }
                     }
                     HStack {
-                        Toggle("🍎 Fruits", isOn: $fruits)
+                        Toggle("🌰 Nuts", isOn: $fruits)
                             .onChange(of: fruits, perform: { (value) in
-                                setAllergie(allergie: "Fruits", value: value)
+                                setAllergie(allergie: "en:nuts", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Fruits") == true {
+                                if allergies?.contains("en:nuts") == true {
                                     fruits = true
                                 }
                             }
@@ -65,10 +65,10 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🍞 Bread", isOn: $bread)
                             .onChange(of: bread, perform: { (value) in
-                                setAllergie(allergie: "Bread", value: value)
+                                setAllergie(allergie: "en:breadcrumb", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Bread") == true {
+                                if allergies?.contains("en:breadcrumb") == true {
                                     bread = true
                                 }
                             }
@@ -76,10 +76,10 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🌾 Wheat", isOn: $wheat)
                             .onChange(of: wheat, perform: { (value) in
-                                setAllergie(allergie: "Wheat", value: value)
+                                setAllergie(allergie: "en:wheat", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Wheat") == true {
+                                if allergies?.contains("en:wheat") == true {
                                     wheat = true
                                 }
                             }
@@ -98,10 +98,10 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🫘 Beans", isOn: $beans)
                             .onChange(of: beans, perform: { (value) in
-                                setAllergie(allergie: "Beans", value: value)
+                                setAllergie(allergie: "en:soybeans", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Beans") == true {
+                                if allergies?.contains("en:soybeans") == true {
                                     beans = true
                                 }
                             }
@@ -109,10 +109,10 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🥚 Eggs", isOn: $eggs)
                             .onChange(of: eggs, perform: { (value) in
-                                setAllergie(allergie: "Eggs", value: value)
+                                setAllergie(allergie: "en:eggs", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Eggs") == true {
+                                if allergies?.contains("en:eggs") == true {
                                     eggs = true
                                 }
                             }
@@ -120,10 +120,10 @@ struct AllergySettingsView: View {
                     HStack {
                         Toggle("🥬 Celery", isOn: $celery)
                             .onChange(of: celery, perform: { (value) in
-                                setAllergie(allergie: "Celery", value: value)
+                                setAllergie(allergie: "en:celery", value: value)
                             })
                             .onAppear() {
-                                if allergies?.contains("Celery") == true {
+                                if allergies?.contains("en:celery") == true {
                                     celery = true
                                 }
                             }

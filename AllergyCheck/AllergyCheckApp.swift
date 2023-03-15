@@ -19,7 +19,7 @@ struct AllergyCheckApp: App {
             else {
                 MainView()
             }
-
+            
         }
     }
 }
