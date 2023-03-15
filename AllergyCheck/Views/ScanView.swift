@@ -30,22 +30,23 @@ struct ScanView: View {
                 .tint(Color("Secondary"))
                 .controlSize(.large)
                 .fontWeight(.bold)
-// Debugging purposes:
-//                TextField("Enter barcode", text: $barcode)
-//                    .keyboardType(.decimalPad)
-//                    .multilineTextAlignment(.center)
-//                Button("Check product", action: {
-//                    showingSheet.toggle()
-//                })
+                // Debugging purposes:
+                //                TextField("Enter barcode", text: $barcode)
+                //                    .keyboardType(.decimalPad)
+                //                    .multilineTextAlignment(.center)
+                //                Button("Check product", action: {
+                //                    showingSheet.toggle()
+                //                })
                 .tint(Color("Secondary"))
                 .controlSize(.large)
                 .fontWeight(.bold)
             }
             .frame(maxWidth: .infinity)
             .frame(maxHeight: .infinity)
-            .background(Color("Primary"))
+            .background(colorScheme == .dark ? Color.black : Color("Primary"))
             .foregroundStyle(.white)
-            .navigationTitle("test")
+            .fontWeight(.bold)
+            //            .navigationTitle("test")
             .toolbar(.hidden)
             .sheet(isPresented: $showingSheet){
                 CameraView()
@@ -53,9 +54,9 @@ struct ScanView: View {
         }
     }
 }
-    
-    struct ScanView_Previews: PreviewProvider {
-        static var previews: some View {
-            ScanView()
-        }
+
+struct ScanView_Previews: PreviewProvider {
+    static var previews: some View {
+        ForEach(ColorScheme.allCases, id: \.self, content: ScanView().preferredColorScheme)
     }
+}

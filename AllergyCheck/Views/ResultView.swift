@@ -11,6 +11,7 @@ struct ResultView: View {
     @StateObject var viewModel = ScanViewModel()
     @Binding var barcode: String
     @State private var allergen = ""
+    @Environment(\.colorScheme) var colorScheme
     
     func checkForAllergy(allergiesArray: Array<String>?, product: Product) -> String {
         // Get the 'Allergies' array from UserDefaults
@@ -62,7 +63,7 @@ struct ResultView: View {
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)
-        .background(Color("Primary"))
+        .background(colorScheme == .dark ? Color.black : Color("Primary"))
         .foregroundStyle(.white)
         .fontWeight(.bold)
         .onAppear {
@@ -70,9 +71,8 @@ struct ResultView: View {
         }
     }
 }
-
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(barcode: Binding.constant("8718452530298"))
+        ForEach(ColorScheme.allCases, id: \.self, content: ResultView(barcode: Binding.constant("8718452530298")).preferredColorScheme)
     }
 }
