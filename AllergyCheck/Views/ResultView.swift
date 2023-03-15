@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultView: View {
     @StateObject var viewModel = ScanViewModel()
     @Binding var barcode: String
-    @State private var allergen = ""
+    @State private var allergens = []
     @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     
@@ -20,12 +20,19 @@ struct ResultView: View {
         let allergies = userDefaults.stringArray(forKey: "Allergies") ?? []
         
         if let allergens = allergiesArray {
+            var allergenString = ""
             for allergen in allergens {
                 if allergies.contains(allergen) {
-                    self.allergen = allergen
-                    return "\(product.productName ?? "The product") contains one of your allergies: \(allergen) ⛔️"
+                    if !allergenString.isEmpty {
+                        allergenString += ", "
+                    }
+                    allergenString += allergen
                 }
             }
+            if !allergenString.isEmpty {
+                return "\(product.productName ?? "The product") contains one or more of your allergies: \(allergenString) ⛔️"
+            }
+
             return "\(product.productName ?? "The product") is safe to consume: it does not contain any of your allergies ☑️"
         }
         
@@ -54,7 +61,6 @@ struct ResultView: View {
                         }
                         if product.allergensTags != nil {
                             Text(checkForAllergy(allergiesArray: product.allergensTags, product: product))
-                            Text(allergen)
                             AsyncImage(url: URL(string: product.imageURL ?? "https://www.freepnglogos.com/uploads/dog-png/bow-wow-gourmet-dog-treats-are-healthy-natural-low-4.png")) { image in
                                 image.resizable()
                                     .frame(width: 300, height: 300)
@@ -86,6 +92,6 @@ struct ResultView: View {
 }
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self, content: ResultView(barcode: Binding.constant("8718452530298")).preferredColorScheme)
+        ForEach(ColorScheme.allCases, id: \.self, content: ResultView(barcode: Binding.constant("8718907044684")).preferredColorScheme)
     }
 }
