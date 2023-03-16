@@ -22,7 +22,7 @@ struct ScanView: View {
                     .font(.largeTitle)
                 Text("AllergyCheck")
                     .font(.largeTitle)
-                Text("Scan a item")
+                Text("Scan an item")
                 Button("Start scanning") {
                     showingSheet.toggle()
                 }
